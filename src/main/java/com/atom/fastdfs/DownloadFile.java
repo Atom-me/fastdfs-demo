@@ -5,6 +5,7 @@ import org.csource.fastdfs.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
@@ -27,7 +28,8 @@ public class DownloadFile {
         fileOutputStream.write(fileBytes);
         fileOutputStream.close();*/
 
-        Files.write(Paths.get("/Users/atom/temp/b.jpg"), fileBytes);
+        Path write = Files.write(Paths.get("/Users/atom/temp/b.jpg"), fileBytes);
+        System.err.println(write);
 
     }
 }
